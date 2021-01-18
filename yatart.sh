@@ -32,10 +32,10 @@ function get_status { $mt status | grep -A1 'General status bits on' | tail -n1 
 function rewind { $mt rewind; }
 function eject { $mt offline; }
 function erase { $mt erase; }
-function fsf { $mt fsf $@; }
-function fsfm { $mt fsf $@; }
-function bsf { $mt fsf $@; }
-function bsfm { $mt fsf $@; }
+function fsf { $mt fsf $1; }
+function fsfm { $mt fsf $1; }
+function bsf { $mt fsf $1; }
+function bsfm { $mt fsf $1; }
 
 # A few more complex functions
 function goto_file {
